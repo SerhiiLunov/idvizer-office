@@ -41,10 +41,10 @@ public class SessionService {
 
     public Session refreshSession(UUID sessionId, String refreshToken) {
         Session session = sessionRepositoryWrapper.findById(sessionId)
-                .orElseThrow(() -> new IllegalArgumentException("Сесія не знайдена"));
+                .orElseThrow(() -> new IllegalArgumentException("Session not found"));
 
         if (!session.getRefreshToken().equals(refreshToken)) {
-            throw new IllegalArgumentException("Некоректний refreshToken");
+            throw new IllegalArgumentException("Incorrect refreshToken");
         }
 
         session.setAuthToken(UUID.randomUUID().toString());

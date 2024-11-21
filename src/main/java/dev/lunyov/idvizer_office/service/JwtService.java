@@ -31,7 +31,8 @@ public class JwtService {
             byte[] keyBytes = Base64.getDecoder().decode(secretKey);
             this.signingKey = new SecretKeySpec(keyBytes, 0, keyBytes.length, "HmacSHA512");
         } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("Invalid Base64 key in 'jwt.secret'. Ensure the key is properly encoded in Base64 format.", e);
+            throw new IllegalArgumentException(
+                    "Invalid Base64 key in 'jwt.secret'. Ensure the key is properly encoded in Base64 format.", e);
         }
     }
 

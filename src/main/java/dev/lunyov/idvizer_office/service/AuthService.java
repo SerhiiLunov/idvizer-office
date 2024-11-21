@@ -28,7 +28,8 @@ public class AuthService {
         }
     }
 
-    public ApiResponse<RefreshSessionResponse.RefreshSessionResponseData> refreshSession(UUID sessionId, String refreshToken) {
+    public ApiResponse<RefreshSessionResponse.RefreshSessionResponseData> refreshSession(
+            UUID sessionId, String refreshToken) {
         try {
             Session session = sessionService.refreshSession(sessionId, refreshToken);
 

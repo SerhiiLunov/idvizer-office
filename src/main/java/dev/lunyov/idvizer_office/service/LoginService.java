@@ -21,7 +21,8 @@ public class LoginService {
     @Value("${app.domain}")
     private String domain;
 
-    public LoginService(JwtService jwtService, EmailService emailService, UserService userService, SessionService sessionService) {
+    public LoginService(JwtService jwtService, EmailService emailService,
+                        UserService userService, SessionService sessionService) {
         this.jwtService = jwtService;
         this.emailService = emailService;
         this.userService = userService;
@@ -35,8 +36,8 @@ public class LoginService {
 
         String loginLink = String.format("https://%s/login?jwtVersion=%s&jwt=%s", domain, jwtVersion, base64Jwt);
 
-        String subject = "Логін у систему";
-        String message = String.format("Перейдіть за посиланням для входу: %s", loginLink);
+        String subject = "Login to the system";
+        String message = String.format("Follow the login link: %s", loginLink);
 
         emailService.sendEmail(email, subject, message);
     }
@@ -49,7 +50,7 @@ public class LoginService {
 
         User user = userService.findUserByEmail(email);
         if (user == null) {
-            throw new IllegalArgumentException("Користувача не знайдено");
+            throw new IllegalArgumentException("User not found");
         }
 
         Session session = sessionService.createSession(user);

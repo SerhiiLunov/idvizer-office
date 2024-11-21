@@ -39,8 +39,8 @@ public class RegistrationService {
         String registrationLink = String.format("https://%s/registration?jwtVersion=%s&base64Jwt=%s",
                 domain, jwtVersion, base64Jwt);
 
-        String subject = "Реєстрація в системі";
-        String message = String.format("Перейдіть за посиланням для завершення реєстрації: %s", registrationLink);
+        String subject = "Registration in the system";
+        String message = String.format("Follow the link to complete registration: %s", registrationLink);
 
         emailService.sendEmail(email, subject, message);
     }
