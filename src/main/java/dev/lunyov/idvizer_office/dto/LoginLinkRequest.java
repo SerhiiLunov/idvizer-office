@@ -27,3 +27,4 @@ public class LoginLinkRequest extends ApiRequest<LoginLinkRequest.LoginLinkData>
         private String email;
     }
 }
+
