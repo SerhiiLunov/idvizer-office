@@ -1,0 +1,61 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/idvizer_db
+    username: user
+    password: superstrongpassword123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        default_schema: public
+        hbm2ddl:
+          auto: update
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+   host: smtp.gmail.com
+   port: 587
+   username: sl.krovlia@gmail.com
+   password: vntc imxa zugi hvbq
+   protocol: smtp
+   properties:
+       mail:
+         smtp:
+           auth: true
+           starttls:
+             enable: true
+           required: true
+           debug: true
+  security:
+    user:
+      name: user
+      password: 123cvb567
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+app:
+  domain: mydomain.com
+
+server:
+  port: 8083
+
+jwt:
+  secret: bOm6+8eRPw1yoopx50KQ4otoM4MNXWbtcLqjLuIlFzASyKnwU6vS0Gkoh4+6qjCNq1ZI5u+rlKjVoskLOfmetg==
+  issuer: your_jwt_issuer_here
+  expiration: 3600000
+
+logging:
+  file:
+    name: app.log  # ????? ????? ????????
+  level:
+    org:
+      springframework: DEBUG  # ?????? ????????? ??? Spring
+    io:
+      jsonwebtoken: DEBUG  # ?????? ????????? ??? JWT ??????????
+    dev:
+      lunyov:
+        idvizer_office:
+          service:
+            JwtService: DEBUG  # ?????? ????????? ??? ?????? JwtService

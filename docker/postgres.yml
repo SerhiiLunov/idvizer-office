@@ -1,0 +1,10 @@
+version: '3'
+services:
+  idvizer-pg:
+    image: postgres:16.2
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: superstrongpassword123
+      POSTGRES_DB: idvizer_db
+    ports:
+      - '5433:5432'
