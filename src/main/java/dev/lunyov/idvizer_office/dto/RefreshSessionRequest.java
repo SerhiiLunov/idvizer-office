@@ -19,10 +19,10 @@ public class RefreshSessionRequest extends ApiRequest<RefreshSessionRequest.Refr
     @Getter
     @Setter
     public static class RefreshSessionRequestData {
-        @NotNull(message = "sessionId не може бути порожнім")
+        @NotNull(message = "sessionId cannot be empty")
         private UUID sessionId;
 
-        @NotNull(message = "refreshToken не може бути порожнім")
+        @NotNull(message = "refreshToken cannot be empty")
         private String refreshToken;
 
         public RefreshSessionRequestData(UUID sessionId, String refreshToken) {
