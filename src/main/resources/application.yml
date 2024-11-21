@@ -39,7 +39,7 @@ app:
   domain: mydomain.com
 
 server:
-  port: 8085
+  port: 8086
 
 jwt:
   secret: bOm6+8eRPw1yoopx50KQ4otoM4MNXWbtcLqjLuIlFzASyKnwU6vS0Gkoh4+6qjCNq1ZI5u+rlKjVoskLOfmetg==
