@@ -18,5 +18,3 @@ databaseChangeLog:
       file: db/changelog/0.0.1/user_changelog.sql
   - include:
       file: db/changelog/0.0.1/verification_changelog.sql
-
-
