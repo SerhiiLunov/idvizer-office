@@ -9,12 +9,13 @@ databaseChangeLog:
   - include:
       file: db/changelog/0.0.1/role_changelog.sql
   - include:
+      file: db/changelog/0.0.1/user_changelog.sql
+  - include:
       file: db/changelog/0.0.1/roles_permissions_changelog.sql
   - include:
       file: db/changelog/0.0.1/session_changelog.sql
   - include:
       file: db/changelog/0.0.1/user_account_changelog.sql
-  - include:
-      file: db/changelog/0.0.1/user_changelog.sql
+
   - include:
       file: db/changelog/0.0.1/verification_changelog.sql

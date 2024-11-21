@@ -5,3 +5,6 @@ CREATE TABLE IF NOT EXISTS "role" (
                         create_date_time TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
                         update_date_time TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
+
+-- DROP TABLE "role" CASCADE ;
+-- DELETE FROM DATABASECHANGELOG WHERE filename = 'db/changelog/0.0.1/role_changelog.sql';
