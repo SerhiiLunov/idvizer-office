@@ -33,7 +33,7 @@ public class RegistrationService {
 
     public void initiateRegistration(String email, String phone) {
         String jwtToken = jwtService.generateJwtToken(email, phone);
-        String jwtVersion = UUID.randomUUID().toString();
+        String jwtVersion = UUID.randomUUID().toString(); // взяти з ключа
         String base64Jwt = Base64.getEncoder().encodeToString(jwtToken.getBytes());
 
         String registrationLink = String.format("https://%s/registration?jwtVersion=%s&base64Jwt=%s",
